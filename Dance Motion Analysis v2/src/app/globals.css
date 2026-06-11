@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #121212;
+  --foreground: #ededed;
+  --surface: #1c1c1c;
+  --surface-hover: #252525;
+  --border: #2e2e2e;
+  --border-hover: #444444;
+  --accent: #fe2c55;
+  --accent-hover: #ff4470;
+  --muted: #737373;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+/* Range slider for timeline */
+input[type="range"] {
+  --range-track: #262626;
+  --range-fill: var(--accent);
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--range-track);
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 8px rgba(254, 44, 85, 0.5);
+}
